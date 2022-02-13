@@ -1,114 +1,80 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Milesprovus</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Miles Website</title>
 </head>
 <style>
-body {
-    height: auto;
-    background: #283048;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #859398, #283048);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #859398, #283048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
+	@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+	body {
+		background: #0F2027;  /* fallback for old browsers */
+		background: linear-gradient(to top, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		font-family: 'Varela Round', sans-serif;
+	}
 #title {
-    text-align: center;
-    font-size: 60px;
-     padding-top: 90px;
-}
-.subtitle {
-    font-size: 20px;
-    color: rgb(57, 57, 160);
-}
-nav {
-	margin: 27px auto 0;
-
-	position: relative;
-	width: 590px;
-	height: 50px;
-	background-color: #34495e;
-	border-radius: 8px;
-	font-size: 0;
-}
-nav a {
-	line-height: 50px;
-	height: 100%;
-	font-size: 15px;
-	display: inline-block;
-	position: relative;
-	z-index: 1;
-	text-decoration: none;
-	text-transform: uppercase;
 	text-align: center;
 	color: white;
-	cursor: pointer;
+	padding-top: 200px;
+	font-size: 80px;
+	font-family: 'Varela Round', sans-serif;
+	height: 100vh;
+	margin: auto;
 }
-nav .animation {
-	position: absolute;
-	height: 100%;
+.subtitle {
+	color: rgb(0, 140, 255);
+	font-size: 40px;
+	margin: auto;
+}
+#projects {
+	background-color: rgb(0, 140, 255);
+	margin: auto;
+}
+.navbar {
+	position: fixed;
+	text-align: center;
+	float: none;
+	width: 100%;
 	top: 0;
-	z-index: 0;
-	transition: all .5s ease 0s;
-	border-radius: 8px;
-}
-a:nth-child(1) {
-	width: 100px;
-}
-a:nth-child(2) {
-	width: 110px;
-}
-a:nth-child(3) {
-	width: 100px;
-}
-a:nth-child(4) {
-	width: 160px;
-}
-a:nth-child(5) {
-	width: 120px;
-}
-nav .start-home, a:nth-child(1):hover~.animation {
-	width: 100px;
 	left: 0;
-	background-color: #1abc9c;
 }
-nav .start-about, a:nth-child(2):hover~.animation {
-	width: 110px;
-	left: 100px;
-	background-color: #e74c3c;
+.navbar ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 10;
+	overflow: hidden;
+	background-color: black;
 }
-nav .start-blog, a:nth-child(3):hover~.animation {
-	width: 100px;
-	left: 210px;
-	background-color: #3498db;
+.navbar li {
+	float: right;
 }
-nav .start-portefolio, a:nth-child(4):hover~.animation {
-	width: 160px;
-	left: 310px;
-	background-color: #9b59b6;
+.navbar li a {
+	text-decoration: none;
+	color: white;
+	padding: 14px 16px;
+	font-size: 40px;
+	text-align: center;
+	width: 100%;
+	
 }
-nav .start-contact, a:nth-child(5):hover~.animation {
-	width: 120px;
-	left: 470px;
-	background-color: #e67e22;
-}
-
-span {
-    color: #2BD6B4;
+.navbar li a:hover {
+	background-color: rgb(0, 140, 255);
 }
 </style>
 <body>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Blog</a>
-        <a href="#">Portefolio</a>
-        <a href="#">Contact</a>
-        <div class="animation start-home"></div>
-    </nav>
-    <header id="title">
-        Hello, I am Miles
-        <p class="subtitle">Here's some stuff i've made</p>
-        </header>
+	<section id="navbar" class="navbar">
+		<ul>
+			<li> <a href="#title">Home</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#links">Links</a></li>
+		</ul>
+	</section>
+	<section id="title">
+		<h1>Hello</h1>
+		<p class="subtitle">I'm Miles, here's some stuff i've done</p>
+	</section>
+	<section id="projects">
+		Hello
+	</section>
 </body>
 </html>
