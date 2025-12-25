@@ -1,5 +1,3 @@
-// Minimal portfolio JS: theme toggle, mobile nav, projects rendering/filtering/search, modal, contact form mailto.
-
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 
@@ -61,64 +59,46 @@ copyEmailBtn?.addEventListener("click", async () => {
     copyEmailBtn.innerHTML = `${email} <span class="muted">(copied)</span>`;
     setTimeout(() => (copyEmailBtn.innerHTML = `${email} <span class="muted">(copy)</span>`), 1200);
   } catch {
-    // Fallback: select-like behavior
     window.location.href = `mailto:${encodeURIComponent(email)}`;
   }
 });
 
-/* ---------- Projects data (edit these) ---------- */
+/* ---------- Projects data (from resume) ---------- */
 const PROJECTS = [
   {
-    id: "fpga-video",
-    title: "FPGA Video Generator",
-    subtitle: "HDMI/VGA timing + pixel pipeline",
-    summary: "Implemented a video timing core with a simple graphics pipeline and on-screen diagnostics.",
-    tags: ["fpga", "hardware"],
-    tech: ["Verilog", "Vivado", "Timing Constraints", "Testbenches"],
+    id: "monocle-teleprompter",
+    title: "Monocle Teleprompter",
+    subtitle: "Wearable, hands-free teleprompter device (Independent Project)",
+    summary:
+      "Wearable teleprompter using an open-source display controlled by an FPGA with a custom Bluetooth protocol and Google Cloud API integration.",
+    tags: ["hardware", "fpga", "software"],
+    tech: ["FPGA", "Bluetooth Protocol", "Google Cloud API", "Display Control"],
     impact: [
-      "Stable video output across multiple resolutions (measured with scope/monitor).",
-      "Modular pipeline (timing → render → output) for easy feature additions.",
-      "Added debug overlays to speed up bring-up and validation."
+      "Developed a wearable, hands-free teleprompter device.",
+      "Controlled an open-source display via FPGA using a custom Bluetooth protocol.",
+      "Used Google Cloud API to control and display slide information on the user’s glasses."
     ],
-    links: {
-      repo: "https://github.com/yourname/fpga-video",
-      demo: "https://www.youtube.com/",
-      writeup: "#"
-    },
-    what: "Describe architecture: timing generator, sync, pixel clocking, BRAM/ROM assets, overlays, and how you verified correctness."
+    links: {},
+    what:
+      "Built a wearable teleprompter prototype. Core components included an FPGA-controlled display, a custom Bluetooth protocol for control, and Google Cloud API integration to manage and display slide information."
   },
   {
-    id: "embedded-sensor",
-    title: "Embedded Sensor Node",
-    subtitle: "Low-power MCU data logger",
-    summary: "Built an MCU-based sensor node with power profiling, robust sampling, and CSV export.",
-    tags: ["embedded", "hardware"],
-    tech: ["C", "I2C/SPI", "RTOS (optional)", "Power Profiling"],
+    id: "assistive-device-prototype",
+    title: "Assistive Device Prototype (Course Project)",
+    subtitle: "Intro to Digital and Analog Electronics — Team of 4",
+    summary:
+      "Client-focused prototype addressing disability constraints; custom hardware and real-time data acquisition/analysis logic.",
+    tags: ["hardware"],
+    tech: ["Hardware Design", "Real-time Data Acquisition", "Prototyping"],
     impact: [
-      "Reduced average current draw via sleep scheduling and duty cycling.",
-      "Implemented fault-tolerant sampling and timestamping.",
-      "Created automated test procedure for sensor validation."
+      "Collaborated with a 4-person team to develop a device for a client’s physical disability.",
+      "Considered societal, physical, and economic constraints during design.",
+      "Designed custom hardware and device logic for real-time data acquisition and analysis.",
+      "Delivered a functional prototype enabling the client to better understand physical limitations."
     ],
-    links: {
-      repo: "https://github.com/yourname/sensor-node"
-    },
-    what: "Describe sampling strategy, debouncing/filtering, calibration, power modes, and test/measurement approach."
-  },
-  {
-    id: "software-tool",
-    title: "Engineering Tooling Script",
-    subtitle: "Automation for builds/tests/data",
-    summary: "Wrote a script/tool to automate repetitive engineering tasks with clear logs and outputs.",
-    tags: ["software"],
-    tech: ["Python", "CLI", "Data Parsing", "CI (optional)"],
-    impact: [
-      "Cut setup time by automating configuration steps.",
-      "Improved traceability with structured logs and artifact outputs."
-    ],
-    links: {
-      repo: "https://github.com/yourname/tooling"
-    },
-    what: "Describe what it automates, how it handles errors, and how you validated outputs."
+    links: {},
+    what:
+      "Worked with a small team to research client needs and build a solutions-based prototype. Designed custom hardware and logic for real-time data acquisition and analysis, delivering a working device to the client."
   }
 ];
 
@@ -146,6 +126,15 @@ function matchesQuery(project) {
     ...(project.tags || [])
   ].join(" ").toLowerCase();
   return hay.includes(q);
+}
+
+function escapeHtml(str) {
+  return String(str)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
 }
 
 function renderProjects() {
@@ -201,15 +190,6 @@ projectSearch?.addEventListener("input", () => {
   renderProjects();
 });
 
-function escapeHtml(str) {
-  return String(str)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
-}
-
 /* ---------- Modal ---------- */
 const modal = $("#projectModal");
 const modalClose = $("#modalClose");
@@ -261,7 +241,6 @@ function openProject(id) {
 
 modalClose?.addEventListener("click", () => modal?.close());
 modal?.addEventListener("click", (e) => {
-  // click outside content closes
   const rect = modal.getBoundingClientRect();
   const inDialog =
     e.clientX >= rect.left && e.clientX <= rect.right &&
@@ -299,7 +278,7 @@ contactForm?.addEventListener("submit", (e) => {
 
   if (!name || !email || !message) return;
 
-  const to = "you@example.com"; // change this
+  const to = "milesprovus@gmail.com";
   const subject = `Portfolio inquiry from ${name}`;
   const body = [
     `Name: ${name}`,
