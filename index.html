@@ -1,178 +1,373 @@
+<!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Miles Website</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Engineering portfolio" />
+  <title>Your Name — Engineering Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<style>
-	@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
-	body {
-		background: #0F2027;  /* fallback for old browsers */
-		background: linear-gradient(to top, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-		font-family: 'Varela Round', sans-serif;
-		height: auto;
-	}
-#title {
-	text-align: center;
-	color: white;
-	padding-top: 200px;
-	font-size: 80px;
-	font-family: 'Varela Round', sans-serif;
-	height: 80vh;
-	margin: auto;
-    text-align: center;
-    font-size: 60px;
-     padding-top: 90px;
-     height: 100vh;
-}
-.subtitle {
-	color: rgb(0, 140, 255);
-	font-size: 40px;
-	margin: auto;
-}
-.navbar {
-	position: fixed;
-	text-align: center;
-	float: none;
-	width: 100%;
-	top: 0;
-	left: 0;
-}
-.navbar ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 10;
-	overflow: hidden;
-	background-color: black;
-}
-.navbar li {
-	float: right;
-}
-.navbar li a {
-	text-decoration: none;
-	color: white;
-	padding: 14px 16px;
-	font-size: 40px;
-	text-align: center;
-	width: 100%;
-}
-.navbar li a:hover {
-	background-color: rgb(0, 140, 255);
-}
-#projects {
-	text-align: center;
-	font-size: 40px;
-	padding-top: 5px;
-	color: rgb(255, 255, 255);
-	background-color: rgb(111, 117, 146);
-	margin: auto;
-	
-}
-.container {
-	display: grid;
-	grid-gap: 15px 15px;
-	grid-template-columns: auto auto auto;
-	grid-template-rows: auto auto auto;
-	justify-content: space-around;
-	grid-column-gap: 0px;
-}
-.container img {
-	width: 250px;
-	height: 250px;
-}
-.container p {
-	background-color: black;
-	padding: 5px;
-	box-shadow: 0 15px 15px #000;
-}
-.container a {
-	text-decoration: none;
-	color: white;
-}
-.container a:hover {
-	color: black;
-	background-color: rgb(0, 140, 255);
-}
-.container p:hover {
-	color: black;
-	background-color: rgb(0, 140, 255);
-	text-decoration: un;
-}
-.toggle {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 62px;
-  height: 32px;
-  display: inline-block;
-  position: relative;
-  border-radius: 50px;
-  overflow: hidden;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  background-color: #4d34a5;
-  transition: background-color ease 0.3s;
-  margin-top: 10;
-}
 
-.toggle:before {
-  content: "";
-  display: block;
-  position: absolute;
-  z-index: 2;
-  width: 28px;
-  height: 28px;
-  background: #fff;
-  left: 2px;
-  top: 2px;
-  border-radius: 50%;
-  font: 10px/28px Helvetica;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-indent: -22px;
-  word-spacing: 37px;
-  color: #fff;
-  text-shadow: -1px -1px rgba(0,0,0,0.15);
-  white-space: nowrap;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  transition: all cubic-bezier(0.3, 1.5, 0.7, 1) 0.3s;
-}
-
-.toggle:checked {
-  background-color: rgb(146, 146, 146);
-}
-
-.toggle:checked:before {
-  left: 32px;
-}
-
-</style>
 <body>
-	<section id="navbar" class="navbar">
-		<ul>
-			<li> <a href="#title">Home</a></li>
-			<li><a href="#about">About</a></li>
-			<li><a href="#links">Links</a></li>
-			<li><a href="#projects">Projects</a></li>
-			<li style="float: left;"><input class="toggle" type="checkbox"/></li>
-		</ul>
-	</section>
-	<section id="title">
-		<h1>Hello</h1>
-		<p class="subtitle">I'm Miles, here's some stuff i've done</p>
-	</section>
-	<section id="projects" class="projects">
-		<h1>Projects:</h1>
-		<div class="container">
-			<p><a href=""><img src="https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder.png" alt="Placeholder"><br> Project 1</a></p>
-			<p><a href=""><img src="https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder.png" alt="Placeholder"><br> Project 2</a></p>
-			<p><a href=""><img src="https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder.png" alt="Placeholder"><br> Project 3</a></p>
-			<p><a href=""><img src="https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder.png" alt="Placeholder"><br> Project 4</a></p>
-			<p><a href=""><img src="https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder.png" alt="Placeholder"><br> Project 5</a></p>
-			<p><a href=""><img src="https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder.png" alt="Placeholder"><br> Project 6</a></p>
-		</div>
-	</section>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand-mark">YN</span>
+        <span class="brand-text">Your Name</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+          <span class="sr-only">Toggle menu</span>
+          <span class="burger" aria-hidden="true"></span>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#skills">Skills</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link" href="#experience">Experience</a></li>
+          <li><a class="nav-link" href="#education">Education</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle theme">
+          <span aria-hidden="true">◐</span>
+        </button>
+        <a class="btn btn-primary" href="assets/Resume.pdf" download>Download Résumé</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="section hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">Engineering Student • Embedded • FPGA • Systems</p>
+          <h1 class="headline">
+            Building reliable systems, clean interfaces, and measurable results.
+          </h1>
+          <p class="lead">
+            Short summary: what you build, what tools you use, and what you’re looking for (internship/full-time/research).
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#projects">View Projects</a>
+            <a class="btn btn-ghost" href="#contact">Get In Touch</a>
+          </div>
+
+          <div class="meta">
+            <div class="meta-item">
+              <span class="meta-label">Location</span>
+              <span class="meta-value">City, State</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Email</span>
+              <button class="linklike" id="copyEmailBtn" type="button" data-email="you@example.com">
+                you@example.com <span class="muted">(copy)</span>
+              </button>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Links</span>
+              <span class="meta-value">
+                <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+                <span class="sep">·</span>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+                <span class="sep">·</span>
+                <a href="https://your-domain.com" target="_blank" rel="noreferrer">Website</a>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Highlights">
+          <h2 class="card-title">Highlights</h2>
+          <ul class="bullets">
+            <li>1–2 line accomplishment with numbers (e.g., “Reduced latency by 35%”).</li>
+            <li>Project outcome + tech (e.g., “FPGA video pipeline in Verilog, 720p”).</li>
+            <li>Leadership/research/competition highlight.</li>
+          </ul>
+
+          <div class="card-row">
+            <div class="pill">Open to: Internships</div>
+            <div class="pill">Focus: Embedded / Digital</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head">
+          <h2>About</h2>
+          <p class="subhead">A concise overview of your interests, strengths, and what you care about.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Profile</h3>
+            <p>
+              Write 4–6 sentences. Mention domain interests (embedded, FPGA, circuits, ML, networking),
+              the kinds of problems you like, and the environments you thrive in.
+            </p>
+            <p class="muted">
+              Tip: keep it measurable/grounded (what you’ve shipped, tested, measured).
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>What I’m looking for</h3>
+            <ul class="bullets">
+              <li>Role type (internship, co-op, research assistant, etc.).</li>
+              <li>Industries (audio, robotics, defense, consumer electronics, etc.).</li>
+              <li>Constraints (remote/on-site, location, timeline).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head">
+          <h2>Skills</h2>
+          <p class="subhead">Tools and areas you can confidently use on a project.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>Core</h3>
+            <ul class="chips">
+              <li>C/C++</li><li>Python</li><li>Git</li><li>Linux</li><li>Debugging</li><li>Testing</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Hardware / Digital</h3>
+            <ul class="chips">
+              <li>Verilog/SystemVerilog</li><li>FPGA (Vivado/Quartus)</li><li>UART/SPI/I2C</li><li>Timing/Constraints</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Design / Tools</h3>
+            <ul class="chips">
+              <li>KiCad</li><li>LTspice</li><li>MATLAB</li><li>Oscilloscope/Logic Analyzer</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head">
+          <h2>Projects</h2>
+          <p class="subhead">A few strong projects with outcomes, constraints, and proof (demo, repo, write-up).</p>
+        </div>
+
+        <div class="toolbar">
+          <div class="filters" aria-label="Project filters">
+            <button class="filter-btn is-active" type="button" data-filter="all">All</button>
+            <button class="filter-btn" type="button" data-filter="fpga">FPGA</button>
+            <button class="filter-btn" type="button" data-filter="embedded">Embedded</button>
+            <button class="filter-btn" type="button" data-filter="hardware">Hardware</button>
+            <button class="filter-btn" type="button" data-filter="software">Software</button>
+          </div>
+
+          <div class="search">
+            <label class="sr-only" for="projectSearch">Search projects</label>
+            <input id="projectSearch" type="search" placeholder="Search projects…" autocomplete="off" />
+          </div>
+        </div>
+
+        <div class="cards" id="projectGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-head">
+          <h2>Experience</h2>
+          <p class="subhead">Internships, labs, research, teaching, leadership—keep bullets impact-focused.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <span class="timeline-role">Engineering Intern</span>
+              <span class="timeline-org">Company Name</span>
+              <span class="timeline-time">Jun 2025 — Aug 2025</span>
+            </div>
+            <ul class="bullets">
+              <li>Did X using Y, resulting in Z (include metrics).</li>
+              <li>Built/validated feature with tests, logs, lab measurements, etc.</li>
+              <li>Collaborated with cross-functional team; shipped to production/release.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <span class="timeline-role">Research Assistant</span>
+              <span class="timeline-org">Lab / University</span>
+              <span class="timeline-time">Jan 2025 — May 2025</span>
+            </div>
+            <ul class="bullets">
+              <li>Designed experiment or prototype; reported results and limitations.</li>
+              <li>Improved reliability/accuracy/throughput by X% or from A → B.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Certifications</h3>
+            <ul class="bullets">
+              <li>Certification Name — Issuer (Year)</li>
+              <li>Safety/Compliance/Cloud — Issuer (Year)</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Awards & Competitions</h3>
+            <ul class="bullets">
+              <li>Award / Scholarship — (Year)</li>
+              <li>Competition placement — (Year)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-head">
+          <h2>Education</h2>
+          <p class="subhead">Degree details + relevant coursework that supports your projects.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>University Name</h3>
+            <p class="muted">B.S. in Electrical/Computer/Mechanical Engineering — Expected 20XX</p>
+            <ul class="bullets">
+              <li>GPA (optional): X.XX / 4.00</li>
+              <li>Relevant coursework: Digital Logic, Circuits, Signals, Embedded Systems, Controls</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Publications / Writing</h3>
+            <ul class="bullets">
+              <li>Paper/Poster/Report Title — Venue (Year)</li>
+              <li>Technical blog post or write-up — Link</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p class="subhead">A simple message form + direct links.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Message</h3>
+            <form id="contactForm">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              <div class="row">
+                <button class="btn btn-primary" type="submit">Send</button>
+                <p class="muted small" id="formStatus" role="status" aria-live="polite"></p>
+              </div>
+            </form>
+          </div>
+
+          <div class="card">
+            <h3>Direct</h3>
+            <ul class="contact-list">
+              <li><span class="muted">Email:</span> <a href="mailto:you@example.com">you@example.com</a></li>
+              <li><span class="muted">GitHub:</span> <a href="https://github.com/" target="_blank" rel="noreferrer">github.com/yourname</a></li>
+              <li><span class="muted">LinkedIn:</span> <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">linkedin.com/in/yourname</a></li>
+              <li><span class="muted">Resume:</span> <a href="assets/Resume.pdf" download>Download PDF</a></li>
+            </ul>
+
+            <div class="note">
+              <p class="muted small">
+                This form uses your email client (mailto) by default. If you want a real backend, host a small endpoint
+                (e.g., Cloudflare Workers, Netlify Forms, Formspree).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="muted small">© <span id="year"></span> Your Name. Minimal portfolio.</p>
+        <a class="muted small" href="#top">Back to top</a>
+      </div>
+    </footer>
+  </main>
+
+  <!-- PROJECT MODAL -->
+  <dialog class="modal" id="projectModal" aria-label="Project details">
+    <div class="modal-inner">
+      <div class="modal-head">
+        <h3 id="modalTitle">Project</h3>
+        <button class="icon-btn" id="modalClose" type="button" aria-label="Close">
+          <span aria-hidden="true">✕</span>
+        </button>
+      </div>
+
+      <p class="muted" id="modalSubtitle"></p>
+
+      <div class="modal-body">
+        <div class="modal-section">
+          <h4>What I built</h4>
+          <p id="modalWhat"></p>
+        </div>
+        <div class="modal-section">
+          <h4>Impact</h4>
+          <ul class="bullets" id="modalImpact"></ul>
+        </div>
+        <div class="modal-section">
+          <h4>Tech</h4>
+          <ul class="chips" id="modalTech"></ul>
+        </div>
+      </div>
+
+      <div class="modal-actions" id="modalLinks"></div>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
 </body>
 </html>
